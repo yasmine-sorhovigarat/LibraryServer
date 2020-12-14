@@ -1,5 +1,5 @@
-const placePirate = function(isbn, title, author, genre, checkedOut, outID) {
-    const tableBody = document.getElementById('pirate-table-data');
+const placeBook = function(isbn, title, author, genre, checkedOut, outID) {
+    const tableBody = document.getElementById('book-table-data');
 
     const entry = document.createElement('tr');
 
@@ -60,7 +60,7 @@ function deleteRow(r) {
     location.reload();
   }
 
-const getPirates = function() {
+const getBooks = function() {
     const xhr = new XMLHttpRequest();
 
     // There are essentially 5 different ready states
@@ -78,10 +78,10 @@ const getPirates = function() {
             const data = JSON.parse(xhr.responseText);
           xhr.getResponseHeader("Access-Control-Allow-Origin", "*");
             for (let i = 0; i < data.length; i++) {
-                placePirate(data[i].isbn, data[i].title, data[i].author, data[i].genre, data[i].checkedOut, data[i].outID);
+                placeBook(data[i].isbn, data[i].title, data[i].author, data[i].genre, data[i].checkedOut, data[i].outID);
             }
 
-            //console.log("Pirate data received");
+            //console.log("Book data received");
         }
     }
     xhr.status = 200;
@@ -90,5 +90,5 @@ const getPirates = function() {
     xhr.send();
 }
 
-getPirates();
+getBooks();
 console.log("Hi there!");

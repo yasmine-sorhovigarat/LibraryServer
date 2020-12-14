@@ -6,15 +6,7 @@ const onClick = function(event) {
     const bookAuthorEle = document.getElementById('book-author');
     const bookGenreEle = document.getElementById('book-genre');
 
-    // Truthy and falsy values in javascript ''
     if (bookISBNEle.value) {
-        const bookObj = {
-            title: bookTitleEle.value,
-            author: bookAuthorEle.value,
-            genre: bookGenreEle.value,
-            isbn: bookISBNEle.value
-        }
-        console.log(bookObj);
     
         const xhr = new XMLHttpRequest();
     
@@ -29,17 +21,11 @@ const onClick = function(event) {
         }
     
         xhr.open("POST", "/LibraryServer/servlet.BookServlet?action=/newBook&ISBN=" + bookISBNEle.value + "&author=" + bookAuthorEle.value + "&title=" + bookTitleEle.value + "&genre=" + bookGenreEle.value);
-        //xhr.open("POST", "http://localhost:8080/LibraryServer/servlet.BookServlet?action=/newBook&ISBN=" + bookISBNEle.value + "&author=" + bookAuthorEle.value + "&title=" + bookTitleEle.value + "&genre=" + bookGenreEle.value);
-       // http://localhost:8080/LibraryServer/servlet.BookServlet?action=/newBook&ISBN=newisbn&author=yasmine&title=mybook&genre=scary
-       // xhr.send(JSON.stringify(bookObj));
         xhr.send();
     } else {
         alert('Please enter a nonblank value for book ISBN!');
-    }
-    
+    }    
 }
 
-const submit = document.getElementById('pirate-submit');
-
-// Event listener
+const submit = document.getElementById('book-submit');
 submit.addEventListener('click', onClick)
