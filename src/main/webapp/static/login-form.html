@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/login-form.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="my-container">
+                <h1 class="logo"><a href="index.html">Library Server!</a></h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="book-list.html">View Books</a></li>
+                    <li><a href="book-form.html">Add Book</a></li>
+                    <li><a href="login-form.html" class="current">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="book-form-main">
+        <div class="form-wrap">
+            <h1>Login Form</h1>
+            <form>
+                <div class="form-group">
+                    <label for="page-username">Username</label>
+                    <input type="text" id="page-username" name="page-username">
+                </div>
+                <div class="form-group">
+                    <label for="page-password">Password</label>
+                    <input type="text" id="page-password" name="page-password">
+                </div>
+                
+                <button id="book-submit" class="btn">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="main-footer">
+        <p>Library Server Inc. &copy; 2020</p>
+    </footer>
+</body>
+</html>
