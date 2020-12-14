@@ -1,0 +1,217 @@
+/* RESET SELECTOR */
+/* Margin, padding have to do with the box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    padding-bottom: 20px;
+}
+
+/* Utility Classes */
+
+.my-container {
+    max-width: 75%;
+    margin: auto;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Navbar */
+
+#navbar {
+    background: #333;
+    color: #fff;
+    overflow: auto;
+}
+
+#navbar a {
+    color: #fff;
+}
+
+#navbar .logo {
+    float: left;
+    padding-top: 20px;
+}
+
+#navbar ul {
+    float: right;
+    list-style: none;
+}
+
+#navbar ul li {
+    float: left;
+}
+
+/* a by default is what we call an inline element. You can't really change
+the margin or padding of inline elements directly, so we change a to a block type element instead */
+#navbar ul li a {
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+#navbar ul li a:hover, #navbar ul li a.current {
+    background: #444;
+    color: #f7c08a;
+}
+
+/* SHOWCASE */
+#showcase {
+    background: url('../img/pirate-ship.jpg') no-repeat center center;
+    height: 600px;
+    padding: 0 50px;
+}
+
+#showcase #showcase-content {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    margin-top: 170px;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+#showcase #showcase-content h1 {
+    font-size: 30px;
+}
+
+/* Pirate List */
+#pirate-list-img {
+    background: url('../img/pirate-ship.jpg') no-repeat center center;
+    min-height: 500px;
+    padding: 20px;
+}
+
+#pirate-list-main {
+    margin: auto;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+#pirate-list-main h1 {
+    font-size: 30px;
+}
+
+#pirate-list-main table {
+    margin: auto;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+#pirate-list-main table thead tr {
+    background-color: #f7c08a;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+#pirate-list-main table th,
+#pirate-list-main table td {
+    padding: 10px 20px;
+}
+
+#pirate-list-main tbody tr {
+    background: #000;
+    border-bottom: 1px solid #ddd;
+    color: white;
+}
+
+#pirate-list-main tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+    color: #000;
+}
+
+#pirate-list-main tbody tr:hover {
+    color: #f7c08a;
+}
+
+/* Pirate Form */
+#pirate-form-main {
+    margin: auto;
+    width: 50%;
+    margin-top: 20px;
+    background: #4b6085;
+    padding: 20px;
+    color: #fff;
+}
+
+#pirate-form-main .form-wrap {
+    padding: 15px 15px;
+}
+
+#pirate-form-main .form-wrap h1,
+#pirate-form-main .form-wrap p {
+    text-align: center;
+}
+
+#pirate-form-main .form-wrap .form-group {
+    margin-top: 15px;
+}
+
+#pirate-form-main .form-wrap label {
+    display: block;
+}
+
+#pirate-form-main .form-wrap .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: #555 solid 1px;
+}
+
+#pirate-form-main .form-wrap .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: #555 solid 1px;
+    border-radius: 5px;
+}
+
+#pirate-form-main .form-wrap button {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+#pirate-form-main .form-wrap button:hover {
+    background: #555;
+}
+
+/* Footer */
+#main-footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+}
